@@ -1,0 +1,10 @@
+dist/
+.idea
+.DS_Store
+node_modules**
+npm-debug.log
+coverage
+.env
+.tmp
+assets.json
+webpack**

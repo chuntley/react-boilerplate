@@ -1,0 +1,51 @@
+{
+  "name": "react-boilerplate",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn dev",
+    "test": "yarn lint && istanbul cover node_modules/mocha/bin/_mocha -- --opts test/mocha.opts",
+    "test:lite": "_mocha --opts test/mocha.opts",
+    "test:watch": "nodemon --ext .js -w ./ --exec '_mocha --opts test/mocha.opts || true'",
+    "dev": "webpack-dev-server --config ./webpack.config.js",
+    "dist": "webpack --config ./webpack.config.js",
+    "lint": "eslint './src/**/*.js' './test/**/*.js'"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "chai": "^4.0.2",
+    "clean-webpack-plugin": "^0.1.16",
+    "enzyme": "^2.8.2",
+    "eslint": "^3.11.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "2.2.3",
+    "eslint-plugin-react": "^6.7.1",
+    "html-webpack-plugin": "^2.29.0",
+    "istanbul": "^1.0.0-alpha.2",
+    "mocha": "^3.4.2",
+    "nodemon": "^1.11.0",
+    "react-test-renderer": "^15.6.1",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^15.6.0",
+    "react-dom": "^15.6.0",
+    "react-redux": "^5.0.5",
+    "react-router-dom": "^4.1.1",
+    "redux": "^3.6.0",
+    "redux-saga": "^0.15.3",
+    "styled-components": "^2.1.0"
+  }
+}

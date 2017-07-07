@@ -1,0 +1,12 @@
+dist/
+.idea
+.vscode
+.DS_Store
+node_modules**
+yarn-error.log
+npm-debug.log
+coverage
+.env
+.tmp
+assets.json
+id_rsa
