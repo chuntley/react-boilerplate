@@ -12,6 +12,7 @@ render(
       <LayoutContainer />
     </BrowserRouter>
   </Provider>,
-document.getElementById('app'));
+  document.getElementById('app'),
+);
 
 if (module.hot) module.hot.accept();
