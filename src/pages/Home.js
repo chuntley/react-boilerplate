@@ -12,8 +12,14 @@ export class Home extends React.Component {
   render() {
     return (
       <section>
-        <h1>Welcome!</h1>
+        <h1 className="title">Welcome!</h1>
         <Link to="/about">Go to about</Link>
+
+        <style jsx>{`
+          .title {
+            color: red;
+          }
+        `}</style>
       </section>
     );
   }
