@@ -9,7 +9,7 @@
     "test:lite": "_mocha --opts test/mocha.opts",
     "test:watch": "nodemon --ext .js -w ./ --exec '_mocha --opts test/mocha.opts || true'",
     "dev": "webpack-dev-server --config ./webpack.config.js",
-    "dist": "webpack --config ./webpack.config.js",
+    "dist": "NODE_ENV=production webpack --config ./webpack.config.js",
     "lint": "eslint './src/**/*.js' './test/**/*.js'"
   },
   "devDependencies": {
