@@ -25,4 +25,9 @@ module.exports = {
       template: 'index.template.html',
     }),
   ],
+  devServer: {
+    port: 8090,
+    publicPath: '/',
+    historyApiFallback: { index: '/' },
+  },
 };
