@@ -20,10 +20,11 @@ $ yarn
 
 Development
 ---
-To lift a webpack-dev-server (default port 8090) with hot module reloading. The application can be reached at http://localhost:8090
+To lift webpack-serve (default port 8090) with hot module reloading.
 ```bash
 $ yarn dev
 ```
+The application can be reached at http://localhost:8090
 
 Build
 ---
