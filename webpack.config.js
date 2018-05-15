@@ -1,7 +1,9 @@
 const webpack = require('webpack');
 const path = require('path');
-
+const convert = require('koa-connect');
+const history = require('connect-history-api-fallback');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 
 module.exports = {
   mode: process.env.NODE_ENV,
@@ -25,9 +27,10 @@ module.exports = {
       template: 'index.template.html',
     }),
   ],
-  devServer: {
+  serve: {
     port: 8090,
-    publicPath: '/',
-    historyApiFallback: { index: '/' },
+    add: (app, middleware, options) => {
+      app.use(convert(history()));
+    },
   },
 };
