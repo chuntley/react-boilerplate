@@ -7,7 +7,7 @@
     "start": "yarn dev",
     "test": "yarn lint && istanbul cover node_modules/mocha/bin/_mocha -- --opts test/mocha.opts",
     "test:lite": "_mocha --opts test/mocha.opts",
-    "test:watch": "nodemon --ext .js -w ./ --exec '_mocha --opts test/mocha.opts || true'",
+    "test:watch": "_mocha -w --opts test/mocha.opts",
     "dev": "NODE_ENV=development webpack-serve",
     "dist": "NODE_ENV=production webpack",
     "lint": "eslint './src/**/*.js' './test/**/*.js'"
@@ -36,7 +36,6 @@
     "jsdom-global": "^3.0.2",
     "koa-connect": "^2.0.1",
     "mocha": "^5.2.0",
-    "nodemon": "^1.17.5",
     "webpack": "^4.15.1",
     "webpack-cli": "^3.0.8",
     "webpack-serve": "^2.0.1"
