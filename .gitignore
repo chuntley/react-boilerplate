@@ -5,7 +5,7 @@ dist/
 node_modules**
 yarn-error.log
 npm-debug.log
-coverage
+.nyc_output
 .env
 .tmp
 assets.json
