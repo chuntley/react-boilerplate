@@ -4,4 +4,4 @@
 --require babel-core/register
 --require jsdom-global/register
 ./test/bootstrap.test.js
-./test/**/*.test.js
+./src/**/*.test.js

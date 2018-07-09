@@ -10,7 +10,7 @@
     "test:watch": "_mocha -w --opts test/mocha.opts",
     "dev": "NODE_ENV=development webpack-serve",
     "dist": "NODE_ENV=production webpack",
-    "lint": "eslint './src/**/*.js' './test/**/*.js'"
+    "lint": "eslint './src/**/*.js'"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

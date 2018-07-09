@@ -2,19 +2,19 @@ import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
 
-import { Home } from '../../src/pages/Home';
+import { Home } from './Home';
 
-describe('Page: Home', function () {
+describe('Page: Home', () => {
   let wrapper;
   const defaultProps = {
     addInitialLoad: () => {},
   };
 
-  beforeEach(function () {
+  beforeEach(() => {
     wrapper = shallow(<Home {...defaultProps} />);
   });
 
-  it('renders <Home /> page', function () {
+  it('renders <Home /> page', () => {
     expect(wrapper.find('h1')).to.have.length(1);
   });
 });
