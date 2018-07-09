@@ -9,14 +9,14 @@ export class About extends React.Component {
       <section>
         <h1>About Page</h1>
         <button onClick={() => this.props.incrementCounter()}>Increment</button>
-        <p>Current Count: {this.props.sample.counter}</p>
+        <p>Current Count: {this.props.counter}</p>
       </section>
     );
   }
 }
 
 export const mapStateToProps = state => ({
-  sample: state.sample,
+  counter: state.sample.counter,
 });
 
 export default connect(

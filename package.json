@@ -37,6 +37,8 @@
     "mocha": "^5.2.0",
     "nyc": "^12.0.2",
     "redux-saga-tester": "^1.0.379",
+    "sinon": "^6.1.3",
+    "sinon-chai": "^3.2.0",
     "webpack": "^4.15.1",
     "webpack-cli": "^3.0.8",
     "webpack-serve": "^2.0.1"
