@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { incrementCounter } from '../actions/sample';
+import { incrementCounter } from '../redux/actions/sample';
 
 export class About extends React.Component {
   render() {

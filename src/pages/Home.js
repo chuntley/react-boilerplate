@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import ErrorBoundary from '../components/ErrorBoundary';
 import TestError from '../components/TestError';
-import { addInitialLoad } from '../actions/sample';
+import { addInitialLoad } from '../redux/actions/sample';
 
 export class Home extends React.Component {
   componentDidMount() {

@@ -1,5 +1,4 @@
 import React from 'react';
-import { expect } from 'chai';
 import { shallow } from 'enzyme';
 
 import { Home } from './Home';
@@ -15,6 +14,6 @@ describe('Page: Home', () => {
   });
 
   it('renders <Home /> page', () => {
-    expect(wrapper.find('h1')).to.have.length(1);
+    wrapper.find('h1').should.have.length(1);
   });
 });
