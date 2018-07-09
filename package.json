@@ -37,9 +37,9 @@
     "koa-connect": "^2.0.1",
     "mocha": "^5.2.0",
     "nodemon": "^1.17.5",
-    "webpack": "^4.12.0",
+    "webpack": "^4.15.1",
     "webpack-cli": "^3.0.8",
-    "webpack-serve": "^1.0.4"
+    "webpack-serve": "^2.0.1"
   },
   "dependencies": {
     "enzyme": "^3.3.0",
