@@ -1,8 +1,8 @@
 import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 
-import reducers from './redux/reducers';
-import sagas from './redux/sagas';
+import reducers from './reducers';
+import sagas from './sagas';
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(
@@ -14,8 +14,8 @@ const store = createStore(
 sagaMiddleware.run(sagas);
 
 if (module.hot) {
-  module.hot.accept('./redux/reducers', () => {
-    store.replaceReducer(require('./redux/reducers').default); // eslint-disable-line global-require
+  module.hot.accept('./reducers', () => {
+    store.replaceReducer(require('./reducers').default); // eslint-disable-line global-require
   });
 }
 
