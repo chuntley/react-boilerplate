@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link } from '@reach/router';
 
 import ErrorBoundary from '../components/ErrorBoundary';
 import TestError from '../components/TestError';

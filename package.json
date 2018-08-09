@@ -44,13 +44,13 @@
     "webpack-serve": "^2.0.1"
   },
   "dependencies": {
+    "@reach/router": "^1.1.1",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-redux": "^5.0.6",
-    "react-router-dom": "^4.3.1",
     "redux": "^4.0.0",
     "redux-saga": "^0.16.0",
     "styled-jsx": "^2.2.4"

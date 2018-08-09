@@ -1,14 +1,14 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Router } from '@reach/router';
 
 import Home from './pages/Home';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
 
 export default (
-  <Switch>
-    <Route exact path="/" component={Home} />
-    <Route exact path="/about" component={About} />
-    <Route exact path="*" component={NotFound} />
-  </Switch>
+  <Router>
+    <Home path="/" />
+    <About path="/about" />
+    <NotFound default />
+  </Router>
 );
