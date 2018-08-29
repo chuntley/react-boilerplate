@@ -7,9 +7,7 @@ import LayoutContainer from './components/LayoutContainer';
 
 render(
   <Provider store={store}>
-    <React.Fragment>
-      <LayoutContainer />
-    </React.Fragment>
+    <LayoutContainer />
   </Provider>,
   document.getElementById('app'),
 );

@@ -1,8 +1,7 @@
 {
   "presets": [
-    "react",
-    "stage-2",
-    ["env", {
+    "@babel/preset-react",
+    ["@babel/preset-env", {
       "useBuiltIns": "entry",
       "targets": {
         "browsers": ["last 2 versions"],
@@ -11,7 +10,7 @@
     }]
   ],
   "plugins": [
-    "transform-runtime",
+    "@babel/plugin-transform-runtime",
     "styled-jsx/babel"
   ]
 }

@@ -7,9 +7,11 @@ export class About extends React.Component {
   render() {
     return (
       <section>
-        <h1>About Page</h1>
-        <button onClick={() => this.props.incrementCounter()}>Increment</button>
-        <p>Current Count: {this.props.counter}</p>
+        <>
+          <h1>About Page</h1>
+          <button onClick={() => this.props.incrementCounter()}>Increment</button>
+          <p>Current Count: {this.props.counter}</p>
+        </>
       </section>
     );
   }

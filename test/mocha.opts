@@ -1,7 +1,7 @@
 --reporter spec
 --ui bdd
 --recursive
---require babel-core/register
+--require @babel/register
 --require jsdom-global/register
 ./test/bootstrap.test.js
 ./src/**/*.test.js
