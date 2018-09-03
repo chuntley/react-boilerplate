@@ -8,6 +8,9 @@ module.exports = {
   entry: {
     main: './src/app.js',
   },
+  output: {
+    publicPath: '/',
+  },
   module: {
     rules: [
       {
