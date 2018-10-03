@@ -8,7 +8,7 @@
     "test": "yarn lint && nyc _mocha --opts test/mocha.opts",
     "test:lite": "_mocha --opts test/mocha.opts",
     "test:watch": "_mocha -w --opts test/mocha.opts",
-    "dev": "NODE_ENV=development webpack-serve",
+    "dev": "webpack-serve",
     "dist": "NODE_ENV=production webpack",
     "lint": "eslint './src/**/*.js'"
   },
