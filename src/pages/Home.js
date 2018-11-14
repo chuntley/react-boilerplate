@@ -1,16 +1,10 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { Link } from '@reach/router';
 
 import ErrorBoundary from '../components/ErrorBoundary';
 import TestError from '../components/TestError';
-import { addInitialLoad } from '../redux/actions/sample';
 
-export class Home extends React.Component {
-  componentDidMount() {
-    this.props.addInitialLoad();
-  }
-
+export default class Home extends React.Component {
   render() {
     return (
       <section>
@@ -30,8 +24,3 @@ export class Home extends React.Component {
     );
   }
 }
-
-export default connect(
-  null,
-  { addInitialLoad },
-)(Home);

@@ -2,7 +2,7 @@ import React from 'react';
 import sinon from 'sinon';
 import { shallow } from 'enzyme';
 
-import { Home } from './Home';
+import Home from './Home';
 
 describe('Page: Home', () => {
   let wrapper;

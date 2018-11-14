@@ -1,27 +1,33 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { Mutation, Query } from 'react-apollo';
+import gql from 'graphql-tag';
 
-import { incrementCounter } from '../redux/actions/sample';
-
-export class About extends React.Component {
+export default class About extends React.Component {
   render() {
     return (
-      <section>
-        <>
-          <h1>About Page</h1>
-          <button onClick={() => this.props.incrementCounter()}>Increment</button>
-          <p>Current Count: {this.props.counter}</p>
-        </>
-      </section>
+      <Query query={gql`
+        query Counter {
+          count @client
+        }
+      `}>
+        {({ data }) => (
+          <Mutation mutation={gql`
+            mutation IncrementOne {
+              incrementOne @client
+            }
+          `}>
+            {incrementOne => (
+              <section>
+                <>
+                  <h1>About Page</h1>
+                  <button onClick={incrementOne}>Increment</button>
+                  <p>Current Count: {data.count}</p>
+                </>
+              </section>
+            )}
+          </Mutation>
+        )}
+      </Query>
     );
   }
 }
-
-export const mapStateToProps = state => ({
-  counter: state.sample.counter,
-});
-
-export default connect(
-  mapStateToProps,
-  { incrementCounter },
-)(About);
