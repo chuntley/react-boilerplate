@@ -1,20 +1,19 @@
 import React from 'react';
+import { css } from 'linaria';
 
 import routes from '../routes';
 
-export default class LayoutContainer extends React.Component {
-  render() {
-    return (
-      <div className="container">
-        {routes}
+const containerStyle = css`
+  margin: 100px auto;
+  width: 200px;
+`;
 
-        <style jsx>{`
-          .container {
-            margin: 100px auto;
-            width: 200px;
-          }
-        `}</style>
-      </div>
-    );
-  }
-}
+const LayoutContainer = () => {
+  return (
+    <div className={containerStyle}>
+      {routes}
+    </div>
+  );
+};
+
+export default LayoutContainer;

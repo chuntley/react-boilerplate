@@ -1,34 +1,17 @@
 import React from 'react';
-import sinon from 'sinon';
-import { shallow } from 'enzyme';
+import userEvent from '@testing-library/user-event';
+import { render } from '../../test/test-utils';
 
-import { About } from './About';
+import About from './About';
 
-describe('Page: About', () => {
-  let wrapper;
-  let countSpy;
-  const sandbox = sinon.createSandbox();
-  const defaultProps = {
-    counter: 5,
-    incrementCounter: () => {},
-  };
+it('renders <About /> page', () => {
+  const { queryByText } = render(<About />);
+  expect(queryByText('About Page')).toBeTruthy();
+  queryByText('Current Count: 0');
+});
 
-  afterEach(() => {
-    sandbox.restore();
-  });
-
-  beforeEach(() => {
-    countSpy = sandbox.spy(defaultProps, 'incrementCounter');
-    wrapper = shallow(<About {...defaultProps} />);
-  });
-
-  it('renders <About /> page', () => {
-    wrapper.find('h1').should.have.length(1);
-    countSpy.should.not.have.been.called;
-  });
-
-  it('clicks button and fires increment counter', () => {
-    wrapper.find('button').simulate('click');
-    countSpy.should.have.been.calledOnce;
-  });
+it('clicks button and fires increment counter', () => {
+  const { queryByText } = render(<About />);
+  userEvent.click(queryByText('Increment'));
+  queryByText('Current Count: 1');
 });

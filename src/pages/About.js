@@ -1,27 +1,21 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { incrementCounter } from '../redux/actions/sample';
+import { incrementOne } from '../redux/actions/sample';
 
-export class About extends React.Component {
-  render() {
-    return (
-      <section>
-        <>
-          <h1>About Page</h1>
-          <button onClick={() => this.props.incrementCounter()}>Increment</button>
-          <p>Current Count: {this.props.counter}</p>
-        </>
-      </section>
-    );
-  }
-}
+const About = () => {
+  const dispatch = useDispatch();
+  const counter = useSelector((state) => state.sample.counter);
 
-export const mapStateToProps = state => ({
-  counter: state.sample.counter,
-});
+  return (
+    <section>
+      <>
+        <h1>About Page</h1>
+        <button onClick={() => dispatch(incrementOne)}>Increment</button>
+        <p>Current Count: {counter}</p>
+      </>
+    </section>
+  );
+};
 
-export default connect(
-  mapStateToProps,
-  { incrementCounter },
-)(About);
+export default About;

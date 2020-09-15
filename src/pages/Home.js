@@ -1,37 +1,25 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { Link } from '@reach/router';
+import { css } from 'linaria';
 
 import ErrorBoundary from '../components/ErrorBoundary';
 import TestError from '../components/TestError';
-import { addInitialLoad } from '../redux/actions/sample';
 
-export class Home extends React.Component {
-  componentDidMount() {
-    this.props.addInitialLoad();
-  }
+const titleStyle = css`
+  color: red;
+`;
 
-  render() {
-    return (
-      <section>
-        <h1 className="title">Welcome!</h1>
-        <Link to="/about">Go to about</Link>
+const Home = () => {
+  return (
+    <section>
+      <h1 className={titleStyle}>Welcome!</h1>
+      <Link to="/about">Go to about</Link>
 
-        <ErrorBoundary>
-          <TestError />
-        </ErrorBoundary>
+      <ErrorBoundary>
+        <TestError />
+      </ErrorBoundary>
+    </section>
+  );
+};
 
-        <style jsx>{`
-          .title {
-            color: red;
-          }
-        `}</style>
-      </section>
-    );
-  }
-}
-
-export default connect(
-  null,
-  { addInitialLoad },
-)(Home);
+export default Home;

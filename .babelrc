@@ -1,15 +1,17 @@
 {
   "presets": [
     "@babel/preset-react",
-    ["@babel/preset-env", {
-      "useBuiltIns": "entry",
-      "targets": {
-        "browsers": ["last 2 versions"]
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": ["last 2 versions"]
+        }
       }
-    }]
+    ],
+    "linaria/babel"
   ],
   "plugins": [
-    "@babel/plugin-transform-runtime",
-    "styled-jsx/babel"
+    "@babel/plugin-transform-runtime"
   ]
 }

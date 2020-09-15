@@ -1,5 +1,2 @@
-export const ADD_INITIAL_LOAD = 'ADD_INITIAL_LOAD';
-export const ADD_INITIAL_LOAD_PROGRESS = 'ADD_INITIAL_LOAD_PROGRESS';
-export const ADD_INITIAL_LOAD_COMPLETE = 'ADD_INITIAL_LOAD_COMPLETE';
-export const INCREMENT_COUNTER = 'INCREMENT_COUNTER';
+// eslint-disable-next-line import/prefer-default-export
 export const INCREMENT_ONE = 'INCREMENT_ONE';

@@ -1,18 +1,13 @@
-import { createStore, compose, applyMiddleware } from 'redux';
-import createSagaMiddleware from 'redux-saga';
+import { createStore, compose } from 'redux';
 
 import reducers from './reducers';
-import sagas from './sagas';
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const sagaMiddleware = createSagaMiddleware();
 const store = createStore(
   reducers,
-  composeEnhancer(applyMiddleware(sagaMiddleware)),
+  composeEnhancer(),
 );
-
-sagaMiddleware.run(sagas);
 
 if (module.hot) {
   module.hot.accept('./reducers', () => {
