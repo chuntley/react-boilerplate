@@ -1,9 +1,0 @@
-reporter: 'spec'
-ui: 'bdd'
-recursive: true
-require: 
-  - '@babel/register'
-  - 'jsdom-global/register'
-spec: './src/**/*.test.js'
-file:
-  - './test/bootstrap.js'
