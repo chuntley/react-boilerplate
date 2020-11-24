@@ -1,6 +1,8 @@
 React Boilerplate
 ========
 
+![Build](https://github.com/chuntley/react-boilerplate/workflows/Build/badge.svg)
+
 Installation
 ---
 
