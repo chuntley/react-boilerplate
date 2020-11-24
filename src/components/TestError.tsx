@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TestError = () => {
+const TestError = (): JSX.Element => {
   // Uncomment the line below to test the error boundary
   // throw new Error();
 

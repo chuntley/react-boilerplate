@@ -8,7 +8,7 @@ const containerStyle = css`
   width: 200px;
 `;
 
-const LayoutContainer = () => {
+const LayoutContainer = (): JSX.Element => {
   return (
     <div className={containerStyle}>
       {routes}

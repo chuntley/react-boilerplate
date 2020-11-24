@@ -1,20 +1,28 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-export default class ErrorBoundary extends React.Component {
-  constructor(props) {
+export interface ErrorBoundaryProps {
+  children: JSX.Element;
+}
+
+export interface ErrorBoundaryState {
+  error: Error | null;
+  errorInfo: React.ErrorInfo | null;
+}
+
+export default class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { error: null, errorInfo: null };
   }
 
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo): void {
     this.setState({
       error,
       errorInfo,
     });
   }
 
-  render() {
+  render(): JSX.Element | (() => JSX.Element) {
     if (this.state.errorInfo) {
       return (
         <div>
@@ -30,7 +38,3 @@ export default class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-
-ErrorBoundary.propTypes = {
-  children: PropTypes.node.isRequired,
-};

@@ -1,11 +1,13 @@
 import React from 'react';
+import { RouteComponentProps } from '@reach/router';
 import { useDispatch, useSelector } from 'react-redux';
 
+import { ReduxState } from '../redux/store';
 import { incrementOne } from '../redux/actions/sample';
 
-const About = () => {
+const About: React.FC<RouteComponentProps> = (): JSX.Element => {
   const dispatch = useDispatch();
-  const counter = useSelector((state) => state.sample.counter);
+  const counter = useSelector((state: ReduxState) => state.sample.counter);
 
   return (
     <section>

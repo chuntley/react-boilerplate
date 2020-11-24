@@ -2,11 +2,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const mode = process.env.NODE_ENV ? process.env.NODE_ENV : 'development';
+const isDevMode = mode !== 'production';
 
 module.exports = {
   mode,
   entry: {
-    main: './src/app.js',
+    main: './src/app.tsx',
+  },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
   output: {
     publicPath: '/',
@@ -14,14 +18,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(ts|js)x?$/,
         exclude: [/node_modules/],
         use: [
           { loader: 'babel-loader' },
           {
             loader: 'linaria/loader',
             options: {
-              sourceMap: process.env.NODE_ENV !== 'production',
+              sourceMap: isDevMode,
             },
           },
         ],
@@ -35,7 +39,7 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              sourceMap: process.env.NODE_ENV !== 'production',
+              sourceMap: isDevMode,
             },
           },
         ],

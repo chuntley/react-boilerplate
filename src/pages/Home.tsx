@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from '@reach/router';
+import { Link, RouteComponentProps } from '@reach/router';
 import { css } from 'linaria';
 
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -9,7 +9,7 @@ const titleStyle = css`
   color: red;
 `;
 
-const Home = () => {
+const Home: React.FC<RouteComponentProps> = (): JSX.Element => {
   return (
     <section>
       <h1 className={titleStyle}>Welcome!</h1>
