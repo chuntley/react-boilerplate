@@ -1,1 +1,0 @@
-export const INCREMENT_ONE = 'INCREMENT_ONE';
