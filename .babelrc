@@ -11,8 +11,5 @@
     "@babel/preset-react",
     "@babel/preset-typescript",
     "linaria/babel"
-  ],
-  "plugins": [
-    "@babel/plugin-transform-runtime"
   ]
 }

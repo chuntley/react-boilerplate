@@ -22,11 +22,11 @@ $ yarn
 
 Development
 ---
-To lift webpack-serve (default port 8090) with hot module reloading.
+To lift vite (default port 3000) with hot module reloading.
 ```bash
 $ yarn dev
 ```
-The application can be reached at http://localhost:8090
+The application can be reached at http://localhost:3000
 
 Build
 ---
