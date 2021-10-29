@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { RouteComponentProps } from '@reach/router';
 
-const About: React.FC<RouteComponentProps> = (): JSX.Element => {
+const About: React.FC = (): JSX.Element => {
   const [count, setCount] = useState(0);
 
   return (

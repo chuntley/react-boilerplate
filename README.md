@@ -22,7 +22,7 @@ $ yarn
 
 Development
 ---
-To lift vite (default port 3000) with hot module reloading.
+To lift the dev server (default port 3000) with hot module reloading.
 ```bash
 $ yarn dev
 ```

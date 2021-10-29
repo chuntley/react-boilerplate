@@ -1,37 +1,10 @@
 import 'regenerator-runtime/runtime'
-import React from 'react';
 import { render as rtlRender } from '@testing-library/react';
-import {
-  createHistory,
-  createMemorySource,
-  LocationProvider,
-} from '@reach/router';
+import { BrowserRouter } from 'react-router-dom'
 
-function render(
-  ui,
-  {
-    route = '/',
-    history = createHistory(createMemorySource(route)),
-    ...renderOptions
-  } = {},
-) {
-  function Wrapper({ children }) {
-    return (
-      <LocationProvider history={history}>
-        {children}
-      </LocationProvider>
-    );
-  }
-  return {
-    ...rtlRender(ui, {
-      wrapper: Wrapper,
-      ...renderOptions,
-    }),
-    history,
-  };
+
+export const render = (ui, { route = '/' } = {}) => {
+  window.history.pushState({}, 'Test page', route)
+  return rtlRender(ui, { wrapper: BrowserRouter })
 }
 
-// re-export everything
-export * from '@testing-library/react';
-// override render method
-export { render };

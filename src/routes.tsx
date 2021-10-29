@@ -1,14 +1,14 @@
 import React from 'react';
-import { Router } from '@reach/router';
+import { Route, Routes } from "react-router-dom";
 
 import Home from './pages/Home';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
 
 export default (
-  <Router>
-    <Home path="/" />
-    <About path="/about" />
-    <NotFound default />
-  </Router>
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/about" element={<About />} />
+    <Route path="*" element={<NotFound />} />
+  </Routes>
 );
