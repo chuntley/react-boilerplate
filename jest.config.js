@@ -1,7 +1,8 @@
 const config = {
   testEnvironment: "jsdom",
+  setupFilesAfterEnv: ["./jest.setup.js"],
   moduleNameMapper: {
-    "test/(.*)$": "<rootDir>/src/test/$1",
+    "utils/(.*)$": "<rootDir>/src/utils/$1",
   },
 };
 

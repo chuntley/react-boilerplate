@@ -1,4 +1,3 @@
-import "regenerator-runtime/runtime";
 import {
   render as rtlRender,
   RenderOptions,

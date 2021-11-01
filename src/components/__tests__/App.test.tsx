@@ -1,6 +1,6 @@
 import React from "react";
 import userEvent from "@testing-library/user-event";
-import { renderWithRouter } from "test/utils";
+import { renderWithRouter } from "utils/rtl-wrapper";
 
 import App from "../App";
 
