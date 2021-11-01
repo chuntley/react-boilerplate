@@ -1,13 +1,14 @@
-import React from 'react';
+import React from "react";
 
-import Layout from './Layout';
-import routes from '../routes';
+import Layout from "./Layout";
+import ErrorBoundary from "./ErrorBoundary";
+import routes from "../routes";
 
 const App = (): JSX.Element => {
   return (
-    <Layout>
-      {routes}
-    </Layout>
+    <ErrorBoundary>
+      <Layout>{routes}</Layout>
+    </ErrorBoundary>
   );
 };
 

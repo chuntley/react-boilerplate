@@ -1,15 +1,9 @@
-import React from 'react';
+import React from "react";
 
-export interface ErrorBoundaryProps {
-  children: JSX.Element;
-}
-
-export interface ErrorBoundaryState {
-  error: Error | null;
-  errorInfo: React.ErrorInfo | null;
-}
-
-export default class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+export default class ErrorBoundary extends React.Component<
+  ErrorBoundaryProps,
+  ErrorBoundaryState
+> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { error: null, errorInfo: null };
@@ -26,7 +20,7 @@ export default class ErrorBoundary extends React.Component<ErrorBoundaryProps, E
     if (this.state.errorInfo) {
       return (
         <div>
-          <div style={{ whiteSpace: 'pre-wrap' }}>
+          <div style={{ whiteSpace: "pre-wrap" }}>
             {this.state.error && this.state.error.toString()}
             <br />
             {this.state.errorInfo.componentStack}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const About: React.FC = (): JSX.Element => {
   const [count, setCount] = useState(0);

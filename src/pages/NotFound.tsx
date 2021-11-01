@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const NotFound: React.FC = (): JSX.Element => {
   return (

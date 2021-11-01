@@ -13,6 +13,11 @@
     "typeRoots": [
       "./node_modules/@types"
     ],
+    "paths": {
+      "test/*": [
+        "./src/test/*"
+      ]
+    }
   },
   "include": [
     "./src"
