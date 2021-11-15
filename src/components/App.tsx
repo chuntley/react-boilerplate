@@ -1,14 +1,16 @@
 import React from "react";
 
 import Layout from "./Layout";
-import ErrorBoundary from "./ErrorBoundary";
 import routes from "../routes";
+import { AppContext, useAppReducer } from "../hooks/useAppContext";
 
 const App = (): JSX.Element => {
+  const [state, dispatch] = useAppReducer();
+
   return (
-    <ErrorBoundary>
+    <AppContext.Provider value={{ state, dispatch }}>
       <Layout>{routes}</Layout>
-    </ErrorBoundary>
+    </AppContext.Provider>
   );
 };
 

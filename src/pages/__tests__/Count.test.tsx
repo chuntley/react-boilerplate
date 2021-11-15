@@ -2,16 +2,16 @@ import React from "react";
 import userEvent from "@testing-library/user-event";
 import { render } from "utils/rtl-wrapper";
 
-import About from "../About";
+import Count from "../Count";
 
-it("renders <About /> page", () => {
-  const { getByText } = render(<About />);
-  expect(getByText("About Page")).toBeTruthy();
+it("renders <Count /> page", () => {
+  const { getByText } = render(<Count />);
+  expect(getByText("Count Page")).toBeTruthy();
   getByText("Current Count: 0");
 });
 
 it("clicks button and fires increment counter", () => {
-  const { getByText } = render(<About />);
+  const { getByText } = render(<Count />);
   userEvent.click(getByText("Increment"));
   getByText("Current Count: 1");
 });
