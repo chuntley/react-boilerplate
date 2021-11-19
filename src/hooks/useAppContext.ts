@@ -22,7 +22,10 @@ export const initialState: AppContextState = {
   count: 0,
 };
 
-const reducer = (state: AppContextState, action: AppContextDispatch) => {
+const reducer = (
+  state: AppContextState,
+  action: AppContextDispatch
+): AppContextState => {
   switch (action.type) {
     case "COUNT_INCREMENT":
       if (typeof action.payload.amount === "number") {
