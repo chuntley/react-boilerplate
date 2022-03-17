@@ -11,21 +11,9 @@
       "dom"
     ],
     "module": "commonjs",
-    "allowSyntheticDefaultImports": true,
-    "typeRoots": [
-      "./node_modules/@types"
-    ],
-    "paths": {
-      "utils/*": [
-        "./src/utils/*"
-      ]
-    }
+    "allowSyntheticDefaultImports": true
   },
   "include": [
     "./src"
-  ],
-  "exclude": [
-    "node_modules",
-    "build"
   ]
 }

@@ -7,7 +7,11 @@ import {
 import { BrowserRouter } from "react-router-dom";
 import { AppContext, useAppReducer } from "../hooks/useAppContext";
 
-const ContextWrapper = ({ children }): JSX.Element => {
+const ContextWrapper = ({
+  children,
+}: {
+  children: JSX.Element;
+}): JSX.Element => {
   const [state, dispatch] = useAppReducer();
 
   return (
@@ -17,7 +21,11 @@ const ContextWrapper = ({ children }): JSX.Element => {
   );
 };
 
-const RouterWrapper = ({ children }): JSX.Element => {
+const RouterWrapper = ({
+  children,
+}: {
+  children: JSX.Element;
+}): JSX.Element => {
   return (
     <BrowserRouter>
       <ContextWrapper>{children}</ContextWrapper>
