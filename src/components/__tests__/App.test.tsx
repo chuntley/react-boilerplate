@@ -1,6 +1,7 @@
 import React from "react";
+import { expect, it } from "vitest";
 import userEvent from "@testing-library/user-event";
-import { renderWithRouter } from "utils/rtl-wrapper";
+import { renderWithRouter } from "../../utils/rtl-wrapper";
 
 import App from "../App";
 

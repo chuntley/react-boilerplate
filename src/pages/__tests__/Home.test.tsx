@@ -1,5 +1,6 @@
 import React from "react";
-import { renderWithRouter } from "utils/rtl-wrapper";
+import { expect, it } from "vitest";
+import { renderWithRouter } from "../../utils/rtl-wrapper";
 
 import Home from "../Home";
 
