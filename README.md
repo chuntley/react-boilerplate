@@ -6,6 +6,8 @@ React Boilerplate
 Installation
 ---
 
+Requires Node >=14.x
+
 Install Yarn:
 
 ```bash
