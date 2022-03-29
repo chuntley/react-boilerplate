@@ -12,7 +12,7 @@ it("renders <Count /> page", () => {
 });
 
 it("clicks button and fires increment counter", () => {
-  const { getByText } = render(<Count />);
+  const { getByText, findByText } = render(<Count />);
   userEvent.click(getByText("Increment"));
-  getByText("Current Count: 1");
+  expect(findByText("Current Count: 1")).toBeTruthy();
 });

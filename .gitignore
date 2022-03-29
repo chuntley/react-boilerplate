@@ -10,5 +10,4 @@ npm-debug.log
 .tmp
 assets.json
 id_rsa
-.linaria-cache
 coverage
