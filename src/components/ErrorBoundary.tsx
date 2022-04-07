@@ -16,7 +16,7 @@ export default class ErrorBoundary extends React.Component<
     });
   }
 
-  render(): JSX.Element | (() => JSX.Element) {
+  render(): JSX.Element {
     if (this.state.errorInfo) {
       return (
         <div>
