@@ -9,7 +9,7 @@
     "test:lite": "vitest run",
     "test:watch": "vitest watch",
     "dev": "vite",
-    "dist": "yarn lint && vite build",
+    "dist": "yarn lint && yarn test && vite build",
     "lint": "yarn lint-js && yarn lint-ts",
     "lint-js": "eslint './src/**/*.{js,jsx,ts,tsx}'",
     "lint-ts": "tsc --noemit"
