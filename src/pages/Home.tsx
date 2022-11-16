@@ -1,15 +1,15 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
-import { AppContext } from "../hooks/useAppContext";
+import { useAppContext } from "../hooks/useAppContext";
 
 const Home: React.FC = (): JSX.Element => {
-  const { state } = useContext(AppContext);
+  const { count } = useAppContext();
 
   return (
     <section>
       <h1>Welcome!</h1>
-      <p>Current count: {state.count}</p>
+      <p>Current count: {count}</p>
       <Link to="/count">Go to count page</Link>
     </section>
   );

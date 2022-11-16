@@ -8,20 +8,14 @@ import {
   RenderResult,
 } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
-import { AppContext, useAppReducer } from "../hooks/useAppContext";
+import { AppContextProvider } from "../hooks/useAppContext";
 
 const ContextWrapper = ({
   children,
 }: {
   children: JSX.Element;
 }): JSX.Element => {
-  const [state, dispatch] = useAppReducer();
-
-  return (
-    <AppContext.Provider value={{ state, dispatch }}>
-      {children}
-    </AppContext.Provider>
-  );
+  return <AppContextProvider>{children}</AppContextProvider>;
 };
 
 const RouterWrapper = ({

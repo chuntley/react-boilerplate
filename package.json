@@ -23,10 +23,10 @@
     "@testing-library/user-event": "^14.4.3",
     "@types/node": "^18.11.9",
     "@types/react": "^18.0.25",
-    "@typescript-eslint/eslint-plugin": "^5.42.1",
-    "@typescript-eslint/parser": "^5.42.1",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
     "@vitejs/plugin-react": "^2.2.0",
-    "@vitest/coverage-c8": "^0.25.1",
+    "@vitest/coverage-c8": "^0.25.2",
     "c8": "^7.12.0",
     "eslint": "^8.27.0",
     "eslint-config-prettier": "^8.5.0",
@@ -34,9 +34,9 @@
     "eslint-plugin-react": "^7.31.10",
     "jsdom": "^20.0.2",
     "prettier": "^2.7.1",
-    "typescript": "^4.8.4",
-    "vite": "^3.2.3",
-    "vitest": "0.25.1"
+    "typescript": "^4.9.3",
+    "vite": "^3.2.4",
+    "vitest": "0.25.2"
   },
   "dependencies": {
     "@testing-library/react": "^13.4.0",
