@@ -4,7 +4,7 @@ import {
   RenderOptions,
   RenderResult,
 } from "@testing-library/react";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { AppContextProvider } from "../hooks/useAppContext";
 
 const ContextWrapper = ({
@@ -21,9 +21,9 @@ const RouterWrapper = ({
   children: JSX.Element;
 }): JSX.Element => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ContextWrapper>{children}</ContextWrapper>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 

@@ -24,11 +24,11 @@ $ yarn
 
 Development
 ---
-To lift the dev server (default port 3000) with hot module reloading.
+To lift the dev server with hot module reloading.
 ```bash
 $ yarn dev
 ```
-The application can be reached at http://localhost:3000
+The output of the command will list the URL to the dev server.
 
 Build
 ---
