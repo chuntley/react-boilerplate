@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useAppContext } from "../hooks/useAppContext";
+import { useAppContext } from "@/hooks/useAppContext";
 
 const Count: React.FC = (): JSX.Element => {
   const { count, countIncrement } = useAppContext();

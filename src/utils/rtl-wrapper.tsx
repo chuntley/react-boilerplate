@@ -5,7 +5,7 @@ import {
   RenderResult,
 } from "@testing-library/react";
 import { HashRouter } from "react-router-dom";
-import { AppContextProvider } from "../hooks/useAppContext";
+import { AppContextProvider } from "@/hooks/useAppContext";
 
 const ContextWrapper = ({
   children,
@@ -27,18 +27,11 @@ const RouterWrapper = ({
   );
 };
 
-export const renderWithRouter = (
+export const render = (
   ui: JSX.Element,
   options: RenderOptions = {},
   route = "/"
 ): RenderResult => {
-  window.history.pushState({}, "Test page", route);
+  window.history.pushState({}, "", route);
   return rtlRender(ui, { wrapper: RouterWrapper, ...options });
-};
-
-export const render = (
-  ui: JSX.Element,
-  options: RenderOptions = {}
-): RenderResult => {
-  return rtlRender(ui, { wrapper: ContextWrapper, ...options });
 };

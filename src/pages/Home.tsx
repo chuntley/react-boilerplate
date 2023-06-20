@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { useAppContext } from "../hooks/useAppContext";
+import { useAppContext } from "@/hooks/useAppContext";
 
 const Home: React.FC = (): JSX.Element => {
   const { count } = useAppContext();

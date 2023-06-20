@@ -1,8 +1,8 @@
 import React from "react";
 
-import Layout from "./Layout";
-import routes from "../routes";
-import { AppContextProvider } from "../hooks/useAppContext";
+import Layout from "@/components/Layout";
+import routes from "@/routes";
+import { AppContextProvider } from "@/hooks/useAppContext";
 
 const App = (): JSX.Element => {
   return (

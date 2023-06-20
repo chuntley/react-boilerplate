@@ -1,17 +1,20 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "strictNullChecks": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noEmit": true,
+    "allowSyntheticDefaultImports": true,
     "jsx": "react",
     "lib": [
       "es6",
       "dom"
     ],
     "module": "commonjs",
-    "allowSyntheticDefaultImports": true
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "strictNullChecks": true,
+    "target": "esnext"
   },
   "include": [
     "./src"

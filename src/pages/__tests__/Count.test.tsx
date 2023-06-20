@@ -1,9 +1,9 @@
 import React from "react";
 import { expect, it } from "vitest";
 import userEvent from "@testing-library/user-event";
-import { render } from "../../utils/rtl-wrapper";
+import { render } from "@/utils/rtl-wrapper";
 
-import Count from "../Count";
+import Count from "@/pages/Count";
 
 it("renders <Count /> page", () => {
   const { getByText } = render(<Count />);

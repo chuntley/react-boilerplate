@@ -1,10 +1,10 @@
 import React from "react";
 import { expect, it } from "vitest";
-import { renderWithRouter } from "../../utils/rtl-wrapper";
+import { render } from "@/utils/rtl-wrapper";
 
-import Home from "../Home";
+import Home from "@/pages/Home";
 
 it("renders <Home /> page", () => {
-  const { getByText } = renderWithRouter(<Home />);
+  const { getByText } = render(<Home />);
   expect(getByText("Welcome!")).toBeTruthy();
 });
