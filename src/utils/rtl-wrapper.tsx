@@ -30,7 +30,7 @@ const RouterWrapper = ({
 export const render = (
   ui: JSX.Element,
   options: RenderOptions = {},
-  route = "/"
+  route = "/",
 ): RenderResult => {
   window.history.pushState({}, "", route);
   return rtlRender(ui, { wrapper: RouterWrapper, ...options });

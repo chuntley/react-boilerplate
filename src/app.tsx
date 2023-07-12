@@ -14,5 +14,5 @@ root.render(
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </ErrorBoundary>
+  </ErrorBoundary>,
 );
