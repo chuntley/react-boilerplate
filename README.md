@@ -6,7 +6,7 @@ React Boilerplate
 Installation
 ---
 
-Requires Node >=18.x
+Requires Node >=18.x, excluding 19.x
 
 Install Yarn:
 
