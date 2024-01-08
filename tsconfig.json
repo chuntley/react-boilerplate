@@ -6,7 +6,8 @@
       "es6",
       "dom"
     ],
-    "module": "commonjs",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "noEmit": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
