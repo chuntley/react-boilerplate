@@ -8,6 +8,7 @@ export default defineConfig({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+    extensions: [".ts", ".tsx", ".mjs", ".js", ".mts", ".jsx", ".json"],
   },
   test: {
     globals: true,
