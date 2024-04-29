@@ -5,13 +5,13 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "start": "yarn dev",
+    "start": "npm run dev",
     "test": "vitest run --coverage",
     "test:lite": "vitest run",
     "test:watch": "vitest watch",
     "dev": "vite",
-    "dist": "yarn lint && yarn test && vite build",
-    "lint": "yarn lint-js & yarn lint-ts",
+    "dist": "npm run lint && npm run test && vite build",
+    "lint": "npm run lint-js & npm run lint-ts",
     "lint-js": "biome lint ./src && biome check --apply ./src",
     "lint-ts": "tsc --noemit"
   },
