@@ -1,33 +1,34 @@
-import React, { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
+import React from "react";
 
 interface AppContextProps {
-  countIncrement: React.Dispatch<React.SetStateAction<number>>;
-  count: number;
+	countIncrement: React.Dispatch<React.SetStateAction<number>>;
+	count: number;
 }
 
 interface AppContextProviderProps {
-  children: React.ReactNode;
+	children: React.ReactNode;
 }
 
 export const AppContext = createContext<AppContextProps>({
-  countIncrement: () => 0,
-  count: 0,
+	countIncrement: () => 0,
+	count: 0,
 });
 
 const AppContextProvider = ({
-  children,
+	children,
 }: AppContextProviderProps): JSX.Element => {
-  const [count, countIncrement] = useState(0);
+	const [count, countIncrement] = useState(0);
 
-  return (
-    <AppContext.Provider value={{ count, countIncrement }}>
-      {children}
-    </AppContext.Provider>
-  );
+	return (
+		<AppContext.Provider value={{ count, countIncrement }}>
+			{children}
+		</AppContext.Provider>
+	);
 };
 
 const useAppContext = (): AppContextProps => {
-  return useContext(AppContext);
+	return useContext(AppContext);
 };
 
 export { AppContextProvider, useAppContext };

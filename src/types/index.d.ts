@@ -1,12 +1,12 @@
 interface LayoutProps {
-  children: JSX.Element;
+	children: JSX.Element;
 }
 
 interface ErrorBoundaryProps {
-  children: JSX.Element;
+	children: JSX.Element;
 }
 
 interface ErrorBoundaryState {
-  error: Error | null;
-  errorInfo: React.ErrorInfo | null;
+	error: Error | null;
+	errorInfo: React.ErrorInfo | null;
 }
