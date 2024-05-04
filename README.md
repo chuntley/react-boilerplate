@@ -8,25 +8,19 @@ Installation
 
 Requires Node >=18.x, excluding 19.x
 
-Install Yarn:
-
-```bash
-https://yarnpkg.com/lang/en/docs/install/
-```
-
-Clone and install Yarn dependencies:
+Clone and install NPM dependencies:
 
 ```bash
 $ git clone git@github.com:chuntley/react-boilerplate.git
 $ cd react-boilerplate
-$ yarn
+$ npm install
 ```
 
 Development
 ---
 To lift the dev server with hot module reloading.
 ```bash
-$ yarn dev
+$ npm run dev
 ```
 The output of the command will list the URL to the dev server.
 
@@ -35,7 +29,7 @@ Build
 
 To bundle the React application
 ```bash
-$ yarn dist
+$ npm run dist
 ```
 
 Testing
@@ -43,17 +37,17 @@ Testing
 
 ```bash
 # run all tests including coverage report and linting
-$ yarn test
+$ npm run test
 
 # run tests in watch mode
-$ yarn test:watch
+$ npm run test:watch
 
 # run single test without coverage or linting
-$ yarn test:lite
+$ npm run test:lite
 ```
 
 Linting
 ---
 ```bash
-$ yarn lint
+$ npm run lint
 ```
