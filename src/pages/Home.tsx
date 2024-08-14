@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { useAppContext } from "@/hooks/useAppContext";
+import { useStore } from "@/hooks/store";
 
 const Home: React.FC = (): JSX.Element => {
-  const { count } = useAppContext();
+  const count = useStore((state) => state.count);
 
   return (
     <section>

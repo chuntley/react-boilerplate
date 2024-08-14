@@ -1,15 +1,15 @@
 import React from "react";
 
-import { useAppContext } from "@/hooks/useAppContext";
+import { useStore } from "@/hooks/store";
 
 const Count: React.FC = (): JSX.Element => {
-  const { count, countIncrement } = useAppContext();
+  const { count, increment } = useStore();
 
   return (
     <section>
       <>
         <h1>Count Page</h1>
-        <button type="button" onClick={() => countIncrement(count + 1)}>
+        <button type="button" onClick={() => increment()}>
           Increment
         </button>
         <p>Current Count: {count}</p>
