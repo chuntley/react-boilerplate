@@ -9,9 +9,6 @@ export default tseslint.config(
   prettierRecommended,
   ...tseslint.configs.recommended,
   {
-    rules: {
-      "@typescript-eslint/no-unused-vars": 0,
-    },
     settings: {
       react: {
         version: "detect",
