@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { useStore } from "@/hooks/store";
+import { useStore } from "@/hooks/useStore";
 
 const Home: React.FC = (): JSX.Element => {
   const count = useStore((state) => state.count);

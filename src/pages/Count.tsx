@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useStore } from "@/hooks/store";
+import { useStore } from "@/hooks/useStore";
 
 const Count: React.FC = (): JSX.Element => {
   const { count, increment } = useStore();
