@@ -6,13 +6,13 @@ import { HashRouter } from "react-router-dom";
 const RouterWrapper = ({
   children,
 }: {
-  children: JSX.Element;
-}): JSX.Element => {
+  children: React.ReactElement;
+}): React.ReactElement => {
   return <HashRouter>{children}</HashRouter>;
 };
 
 export const render = (
-  ui: JSX.Element,
+  ui: React.ReactElement,
   options: RenderOptions = {},
   route = "/",
 ): RenderResult => {

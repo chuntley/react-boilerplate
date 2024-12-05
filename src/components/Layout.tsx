@@ -1,10 +1,10 @@
 import React from "react";
 
 interface LayoutProps {
-  children: JSX.Element;
+  children: React.ReactElement;
 }
 
-const Layout = ({ children }: LayoutProps): JSX.Element => {
+const Layout = ({ children }: LayoutProps): React.ReactElement => {
   return <div>{children}</div>;
 };
 

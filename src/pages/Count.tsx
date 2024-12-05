@@ -2,7 +2,7 @@ import React from "react";
 
 import { useStore } from "@/hooks/useStore";
 
-const Count: React.FC = (): JSX.Element => {
+const Count: React.FC = (): React.ReactElement => {
   const { count, increment } = useStore();
 
   return (
