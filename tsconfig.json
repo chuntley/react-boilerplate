@@ -1,15 +1,8 @@
 {
   "compilerOptions": {
     "jsx": "react",
-    "lib": [
-      "es6",
-      "dom"
-    ],
-    "module": "ESNext",
     "moduleResolution": "Bundler",
     "noEmit": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
     "paths": {
       "@/*": ["./src/*"]
     },
