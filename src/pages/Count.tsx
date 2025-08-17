@@ -7,13 +7,11 @@ const Count: React.FC = (): React.ReactElement => {
 
   return (
     <section>
-      <>
-        <h1>Count Page</h1>
-        <button type="button" onClick={() => increment()}>
-          Increment
-        </button>
-        <p>Current Count: {count}</p>
-      </>
+      <h1>Count Page</h1>
+      <button type="button" onClick={() => increment()}>
+        Increment
+      </button>
+      <p>Current Count: {count}</p>
     </section>
   );
 };
