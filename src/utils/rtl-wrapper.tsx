@@ -1,13 +1,8 @@
 import { render as rtlRender } from "@testing-library/react";
 import { RenderOptions, RenderResult } from "@testing-library/react";
-import React from "react";
 import { HashRouter } from "react-router-dom";
 
-const RouterWrapper = ({
-  children,
-}: {
-  children: React.ReactElement;
-}): React.ReactElement => {
+const RouterWrapper = ({ children }: { children: React.ReactElement }) => {
   return <HashRouter>{children}</HashRouter>;
 };
 

@@ -1,9 +1,8 @@
-import React from "react";
-
 import { useStore } from "@/hooks/useStore";
 
-const Count: React.FC = (): React.ReactElement => {
-  const { count, increment } = useStore();
+const Count = () => {
+  const count = useStore((state) => state.count);
+  const increment = useStore((state) => state.increment);
 
   return (
     <section>

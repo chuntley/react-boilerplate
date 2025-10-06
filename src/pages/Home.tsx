@@ -1,9 +1,8 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 import { useStore } from "@/hooks/useStore";
 
-const Home: React.FC = (): React.ReactElement => {
+const Home = () => {
   const count = useStore((state) => state.count);
 
   return (

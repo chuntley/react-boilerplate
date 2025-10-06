@@ -1,9 +1,13 @@
 import { render } from "@/utils/rtl-wrapper";
+import { cleanup } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import React from "react";
-import { expect, it } from "vitest";
+import { afterEach, expect, it } from "vitest";
 
 import Count from "@/pages/Count";
+
+afterEach(() => {
+  cleanup();
+});
 
 it("renders <Count /> page", () => {
   const { getByText } = render(<Count />);
@@ -11,8 +15,9 @@ it("renders <Count /> page", () => {
   getByText("Current Count: 0");
 });
 
-it("clicks button and fires increment counter", () => {
-  const { getByText, findByText } = render(<Count />);
-  userEvent.click(getByText("Increment"));
-  expect(findByText("Current Count: 1")).toBeTruthy();
+it("clicks button and fires increment counter", async () => {
+  const user = userEvent.setup();
+  const { getByRole, findByText } = render(<Count />);
+  await user.click(getByRole("button", { name: "Increment" }));
+  expect(await findByText("Current Count: 1")).toBeTruthy();
 });

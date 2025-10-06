@@ -1,9 +1,7 @@
-import React from "react";
-
 import Layout from "@/components/Layout";
 import routes from "@/routes";
 
-const App = (): React.ReactElement => {
+const App = () => {
   return <Layout>{routes}</Layout>;
 };
 
