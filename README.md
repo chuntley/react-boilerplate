@@ -6,7 +6,7 @@ React Boilerplate
 Installation
 ---
 
-Requires Node >=20.x, excluding 21.x
+Requires Node 20.x, 22.x, or 24.x
 
 Install Yarn: https://yarnpkg.com/lang/en/docs/install/
 
