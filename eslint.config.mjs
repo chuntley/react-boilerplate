@@ -14,17 +14,13 @@ export default defineConfig(
     plugins: {
       "react-hooks": reactHooks,
     },
-    rules: {
-      ...reactHooks.configs.recommended.rules,
-    },
-  },
-  {
     settings: {
       react: {
         version: "detect",
       },
     },
     rules: {
+      ...reactHooks.configs.recommended.rules,
       "react/react-in-jsx-scope": "off",
     },
   },
