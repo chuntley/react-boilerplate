@@ -1,5 +1,5 @@
 interface LayoutProps {
-  children: React.ReactElement;
+  children: React.ReactNode;
 }
 
 const Layout = ({ children }: LayoutProps) => {

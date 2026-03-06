@@ -2,7 +2,7 @@ import { render as rtlRender } from "@testing-library/react";
 import { RenderOptions, RenderResult } from "@testing-library/react";
 import { HashRouter } from "react-router-dom";
 
-const RouterWrapper = ({ children }: { children: React.ReactElement }) => {
+const RouterWrapper = ({ children }: { children: React.ReactNode }) => {
   return <HashRouter>{children}</HashRouter>;
 };
 
