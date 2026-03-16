@@ -1,14 +1,10 @@
 import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+import { RouterProvider } from "react-router";
 
-import App from "@/components/App";
+import router from "@/routes";
 
 const container = document.getElementById("app");
 if (!container) throw new Error("Failed to find the root element");
 const root = createRoot(container);
 
-root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-);
+root.render(<RouterProvider router={router} />);

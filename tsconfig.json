@@ -1,13 +1,21 @@
 {
   "compilerOptions": {
     "jsx": "react-jsx",
+    "erasableSyntaxOnly": true,
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleDetection": "force",
     "moduleResolution": "Bundler",
     "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
     "paths": {
       "@/*": ["./src/*"]
     },
+    "skipLibCheck": true,
     "strict": true,
-    "target": "esnext"
+    "target": "esnext",
+    "verbatimModuleSyntax": true
   },
   "include": [
     "./src"
