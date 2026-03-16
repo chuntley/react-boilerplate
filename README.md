@@ -1,12 +1,10 @@
-React Boilerplate
-========
+# React Boilerplate
 
 ![Build](https://github.com/chuntley/react-boilerplate/workflows/Build/badge.svg)
 
-Installation
----
+## Installation
 
-Requires Node 20.x, 22.x, 24.x, or 25.x
+Requires Node 22.x, 24.x, or 25.x
 
 Install Yarn: https://yarnpkg.com/lang/en/docs/install/
 
@@ -18,24 +16,25 @@ $ cd react-boilerplate
 $ yarn
 ```
 
-Development
----
+## Development
+
 To lift the dev server with hot module reloading.
+
 ```bash
 $ yarn dev
 ```
+
 The output of the command will list the URL to the dev server.
 
-Build
----
+## Build
 
 To bundle the React application
+
 ```bash
 $ yarn dist
 ```
 
-Testing
----
+## Testing
 
 ```bash
 # run all tests including coverage report and linting
@@ -48,8 +47,8 @@ $ yarn test:watch
 $ yarn test:lite
 ```
 
-Linting
----
+## Linting
+
 ```bash
 $ yarn lint
 ```
