@@ -30,11 +30,12 @@ it("renders NotFound page for an invalid route", () => {
 });
 
 it("can browse to the count page and increment counter", async () => {
+  const user = userEvent.setup();
   const router = createTestRouter();
   render(<RouterProvider router={router} />);
-  expect(screen.getByText("Welcome!")).toBeTruthy();
-  await userEvent.click(screen.getByText("Go to count page"));
-  expect(await screen.findByText("Count Page")).toBeTruthy();
-  await userEvent.click(screen.getByText("Increment"));
-  expect(await screen.findByText("Current Count: 1")).toBeTruthy();
+  expect(screen.getByText("Welcome!")).toBeInTheDocument();
+  await user.click(screen.getByText("Go to count page"));
+  expect(await screen.findByText("Count Page")).toBeInTheDocument();
+  await user.click(screen.getByText("Increment"));
+  expect(await screen.findByText("Current Count: 1")).toBeInTheDocument();
 });
