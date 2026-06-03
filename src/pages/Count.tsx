@@ -1,18 +1,18 @@
 import { useStore } from "@/hooks/useStore";
 
 const Count = () => {
-  const count = useStore((state) => state.count);
-  const increment = useStore((state) => state.increment);
+	const count = useStore((state) => state.count);
+	const increment = useStore((state) => state.increment);
 
-  return (
-    <section>
-      <h1>Count Page</h1>
-      <button type="button" onClick={() => increment()}>
-        Increment
-      </button>
-      <p>Current Count: {count}</p>
-    </section>
-  );
+	return (
+		<section>
+			<h1>Count Page</h1>
+			<button type="button" onClick={() => increment()}>
+				Increment
+			</button>
+			<p>Current Count: {count}</p>
+		</section>
+	);
 };
 
 export default Count;

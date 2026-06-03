@@ -3,15 +3,15 @@ import { Link } from "react-router";
 import { useStore } from "@/hooks/useStore";
 
 const Home = () => {
-  const count = useStore((state) => state.count);
+	const count = useStore((state) => state.count);
 
-  return (
-    <section>
-      <h1>Welcome!</h1>
-      <p>Current count: {count}</p>
-      <Link to="/count">Go to count page</Link>
-    </section>
-  );
+	return (
+		<section>
+			<h1>Welcome!</h1>
+			<p>Current count: {count}</p>
+			<Link to="/count">Go to count page</Link>
+		</section>
+	);
 };
 
 export default Home;

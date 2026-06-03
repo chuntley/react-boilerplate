@@ -6,14 +6,14 @@ import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 
 const router = createBrowserRouter([
-  {
-    element: <Layout />,
-    children: [
-      { path: "/", element: <Home /> },
-      { path: "/count", element: <Count /> },
-      { path: "*", element: <NotFound /> },
-    ],
-  },
+	{
+		element: <Layout />,
+		children: [
+			{ path: "/", element: <Home /> },
+			{ path: "/count", element: <Count /> },
+			{ path: "*", element: <NotFound /> },
+		],
+	},
 ]);
 
 export default router;

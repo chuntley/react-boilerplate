@@ -6,14 +6,18 @@
 
 Requires Node 22.x, 24.x, 25.x, or 26.x
 
-Install Yarn: https://yarnpkg.com/lang/en/docs/install/
+Install pnpm (via Corepack, bundled with Node): https://pnpm.io/installation
+
+```bash
+$ corepack enable pnpm
+```
 
 Clone and install dependencies:
 
 ```bash
 $ git clone git@github.com:chuntley/react-boilerplate.git
 $ cd react-boilerplate
-$ yarn
+$ pnpm install
 ```
 
 ## Development
@@ -21,7 +25,7 @@ $ yarn
 To lift the dev server with hot module reloading.
 
 ```bash
-$ yarn dev
+$ pnpm dev
 ```
 
 The output of the command will list the URL to the dev server.
@@ -31,24 +35,30 @@ The output of the command will list the URL to the dev server.
 To bundle the React application
 
 ```bash
-$ yarn dist
+$ pnpm dist
 ```
 
 ## Testing
 
 ```bash
-# run all tests including coverage report and linting
-$ yarn test
+# run all tests including coverage report
+$ pnpm test
 
 # run tests in watch mode
-$ yarn test:watch
+$ pnpm test:watch
 
 # run single test without coverage or linting
-$ yarn test:lite
+$ pnpm test:lite
 ```
 
 ## Linting
 
 ```bash
-$ yarn lint
+$ pnpm lint
+```
+
+## Formatting
+
+```bash
+$ pnpm format
 ```

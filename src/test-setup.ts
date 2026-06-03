@@ -4,6 +4,6 @@ import { afterEach } from "vitest";
 import { useStore } from "@/hooks/useStore";
 
 afterEach(() => {
-  cleanup();
-  useStore.setState({ count: 0 });
+	cleanup();
+	useStore.setState({ count: 0 });
 });
