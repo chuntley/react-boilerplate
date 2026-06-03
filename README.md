@@ -4,7 +4,7 @@
 
 ## Installation
 
-Requires Node 22.x, 24.x, or 25.x
+Requires Node 22.x, 24.x, 25.x, or 26.x
 
 Install Yarn: https://yarnpkg.com/lang/en/docs/install/
 
